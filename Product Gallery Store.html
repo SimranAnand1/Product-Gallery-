@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>Image Gallery of Products</title>
+</head>
+<h1>Simran's Product Store</h1>
+<marquee>"Welcome to Simran's Product Store"</marquee>
+<br>
+<h3><i><font color="red">Click on a product category to view corresponding product images!</font></i></h3>
+<body bgcolor= "yellow">
+    <section>
+        <ul>
+            <li class="list active" data-filter="All">All</li>
+            <li class="list" data-filter="chocolate">Chocolates</li>
+            <li class="list" data-filter="jewelery">Jewellery</li>
+            <li class="list" data-filter="watch">Watches</li>
+            <li class="list" data-filter="shoe">Shoes</li>
+            <li class="list" data-filter="book">Books</li>
+        </ul>
+        <div class="product">
+            <div class="itemBox chocolate"><img src="Dairy Milk.JPG" alt=""></div>
+            <div class="itemBox jewelery"><img src="j1.jpg" alt=""></div>
+            <div class="itemBox watch"><img src="w1.jpg" alt=""></div>
+            <div class="itemBox shoe"><img src="s1.jpg" alt=""></div>
+            <div class="itemBox book"><img src="b1.jpg" alt=""></div>
+            <div class="itemBox chocolate"><img src="Ferrero Rocher.JPG" alt=""></div>
+            <div class="itemBox jewelery"><img src="j2.jpg" alt=""></div>
+            <div class="itemBox watch"><img src="w2.jpg" alt=""></div>
+            <div class="itemBox shoe"><img src="s2.jpg" alt=""></div>
+            <div class="itemBox book"><img src="b2.jpg" alt=""></div>
+            <div class="itemBox chocolate"><img src="KitKat.JPG" alt=""></div>
+            <div class="itemBox jewelery"><img src="j3.jpg" alt=""></div>
+            <div class="itemBox watch"><img src="w3.jpg" alt=""></div>
+            <div class="itemBox shoe"><img src="s3.jpg" alt=""></div>
+            <div class="itemBox book"><img src="b3.jpg" alt=""></div>
+            <div class="itemBox chocolate"><img src="Hersheys.JPG" alt=""></div>
+            <div class="itemBox watch"><img src="w4.jpg" alt=""></div>
+            <div class="itemBox shoe shoe"><img src="s4.jpg" alt=""></div>
+            <div class="itemBox headphone book"><img src="b4.jpg" alt=""></div>
+            <div class="itemBox chocolate"><img src="Snickers.JPG" alt=""></div>
+        </div>
+
+
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js";
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script>$(document).ready(function(){
+    $('.list').click(function(){
+        const value = $(this).attr('data-filter');
+        if(value == 'All'){
+            $('.itemBox').show('1000');
+        }
+        else{
+            $('.itemBox').not('.'+value).hide('1000');
+            $('.itemBox').filter('.'+value).show('1000');
+        }
+   
+    })
+
+    $('.list').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+   
+})</script>
+   <script src="app5.js"></script>  
+</body>
+</html>
